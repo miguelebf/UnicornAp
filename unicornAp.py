@@ -36,9 +36,6 @@ def stop():
     print("Restarting NetworkManager...")
     os.system("/etc/init.d/network-manager restart")
     print("Flushing iptables rules...")
-    print(".")
-    print("..")
-    print("...")
     os.system("iptables --flush")
     os.system("iptables --flush -t nat")
     os.system("iptables --delete-chain")
@@ -146,7 +143,7 @@ if tools_d=="n" or tools_d=="N":
         file.write(dnsHostString)
         file.close()
 
-    print("Startinf Dnsmasq...")
+    print("Starting Dnsmasq...")
     os.system("screen -S UnicornAp-Dnsmasq -m -d dnsmasq --no-daemon")
     
     
