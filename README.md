@@ -28,11 +28,14 @@ A little script in python to create a fake AP
 ```
 ### Prerequisites
  
-Dnsmasq
+Dnsmasq, Hostapd, Dhcp-Server
+
 
 ```
 apt update
 apt install dnsmasq
+apt install hostapd
+apt install isc-dhcp-server
 ```
 ### Integrated Tools
 
